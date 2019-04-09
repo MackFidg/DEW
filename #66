@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //исходный массив
+            int[] arr = new int[10] { 8, 9, 10, 84, 6, 7, 2, 4, 1, 3};
+            //измененный массив
+            int[] arr1 = new int[10] { 8, 9, 10, 84, 6, 7, 0, 4, 1, 3 };
+            //находим индекс значениея '0'
+            int i = 0;
+            foreach (int f in arr1)
+            {
+                if (f > 0) i++;
+                else if (f == 0) break; 
+            } 
+            //выводим результат 
+            Console.WriteLine(arr[i]);
+        }
+    }
+}
